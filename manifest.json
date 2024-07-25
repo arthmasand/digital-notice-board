@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Digital Notice Board",
+  "version": "1.0",
+  "description": "A digital notice board for better collaboration and communication.",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "images/icon16.png" 
+      
+    }
+  },
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "scripts/background.js"
+  }
+}
+
+  

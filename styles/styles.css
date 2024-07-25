@@ -1,0 +1,111 @@
+/* Base styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  margin: 0; /* Reset margin to zero */
+  padding: 0; /* Reset padding to zero */
+  width: 100vw;           
+  height: 100vh; /* Ensure full viewport height */
+  display: flex;
+  justify-content: center;
+  margin-top: 200px;               
+  position: relative; 
+  align-items: center;
+  overflow-y: auto; /* Hide scrollbars for a cleaner look */  
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Container styles */
+#widgets-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 16px;     
+  
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  animation: slideIn 0.5s ease-in-out;
+}
+
+/* Widget styles */
+.widget {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  flex: 1 1 100%; /* Full width for individual widgets */
+  box-sizing: border-box;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.widget:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Heading styles */
+h2 {
+  font-size: 1.8em; /* Slightly larger font size */
+  margin-bottom: 16px; /* Increased margin for better spacing */
+  color: #333;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Button styles */
+button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px; /* Larger padding for better clickability */
+  font-size: 1.1em; /* Slightly larger font size */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff3d2e;
+}
+
+/* Google Slides widget styles */
+.google-slide-widget {
+  width: 100%;
+  height: 600px; /* Increased height for better visibility */
+  border: none;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Pomodoro timer styles */
+#pomodoro-timer-display {
+  font-size: 2em;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  animation: fadeIn 2s ease-in-out;   
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
